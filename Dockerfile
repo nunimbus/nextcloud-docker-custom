@@ -149,7 +149,8 @@ ENV APACHE_RUN_USER=www-data \
     APACHE_PID_FILE=/var/run/apache2.pid \
     APACHE_RUN_DIR=/var/run/apache2
 
-RUN apt-get autoremove -y git jq moreutils
+RUN apt-get autoremove -y git jq moreutils && \
+    apt-get clean
 
 ######## DEBUG ########
 ARG VIM=0 \
